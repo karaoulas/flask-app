@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="el">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Για τη Λιάννα μου ❤️</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+    <div class="container">
+        <h1>🌹 Λιάννα, η καρδιά μου χτυπάει για εσένα! 🌹</h1>
+        <p>Είσαι το φως στη ζωή μου και αυτή η ιστοσελίδα είναι ένα μικρό δώρο για σένα! 💖</p>
+        <button id="surprise-btn">Πάτα με 💕</button>
+        <p id="hidden-message" class="hidden">Είσαι η καλύτερη κοπέλα του κόσμου! 😍</p>
+    </div>
+
+    <script>
+        document.getElementById("surprise-btn").addEventListener("click", function() {
+            document.getElementById("hidden-message").classList.toggle("hidden");
+        });
+
+        // Δημιουργία κινούμενων καρδιών
+        function createHeart() {
+            const heart = document.createElement("div");
+            heart.classList.add("heart");
+            heart.style.left = Math.random() * 100 + "vw";
+            heart.style.animationDuration = Math.random() * 2 + 3 + "s";
+            document.body.appendChild(heart);
+
+            setTimeout(() => {
+                heart.remove();
+            }, 5000);
+        }
+
+        setInterval(createHeart, 300);
+    </script>
+
+</body>
+</html>

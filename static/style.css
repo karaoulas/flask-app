@@ -1,0 +1,71 @@
+/* Γενικές Ρυθμίσεις */
+body {
+    background: linear-gradient(135deg, #ff9a9e, #fad0c4);
+    text-align: center;
+    font-family: 'Arial', sans-serif;
+    overflow: hidden;
+}
+
+/* Κεντρικό Κουτί */
+.container {
+    max-width: 600px;
+    margin: 50px auto;
+    background: rgba(255, 255, 255, 0.9);
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.2);
+    position: relative;
+    z-index: 10;
+}
+
+/* Τίτλος */
+h1 {
+    color: #d6336c;
+    font-size: 28px;
+    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Κείμενο */
+p {
+    color: #333;
+    font-size: 18px;
+}
+
+/* Κουμπί */
+button {
+    background: #ff477e;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover {
+    background: #d6336c;
+    transform: scale(1.1);
+}
+
+/* Κρυφό μήνυμα */
+.hidden {
+    display: none;
+    font-size: 20px;
+    color: #d6336c;
+    margin-top: 15px;
+}
+
+/* Κινούμενες Καρδιές */
+.heart {
+    position: absolute;
+    bottom: -10px;
+    font-size: 25px;
+    color: red;
+    animation: floatUp 5s linear infinite;
+}
+
+@keyframes floatUp {
+    0% { transform: translateY(0); opacity: 1; }
+    100% { transform: translateY(-100vh); opacity: 0; }
+}
