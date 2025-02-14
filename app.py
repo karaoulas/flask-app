@@ -4,8 +4,7 @@ app = Flask(__name__)
 
 @app.route("/")
 def home():
-    return "<h1>Hello from AWS CodePipeline! 🚀</h1>"
-
+    return "ok"
 
 
 
